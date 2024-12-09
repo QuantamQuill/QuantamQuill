@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Ensure the body takes full height of the page */
+    background: linear-gradient(45deg, #ff0080, #00bfff, #ff00ff, #00ffff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    animation-delay: 1s;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.about {
+    margin-bottom: 30px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.member {
+    max-width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.member img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.member h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.member p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+/* Initial hidden state for scroll-based animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+
+/* Visible state when in view */
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
